@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62,5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.banner-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.banner-text h1 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 80px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    animation-name: moveToLeft;
+    animation-duration: 2s;
+}
+
+.banner-text p {
+    color: #eee;
+    font-family: "Josefin sans" , sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-align: right;
+    animation-name: moveToRight;
+    animation-duration: 2s;
+}
+
+.btns {
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+
+.btn {
+    width: 170px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    border-radius: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    color: tomato ;
+    border: 2px solid #fff;
+    transition: all 0.7s;
+}
+
+.login {
+    background-color: white;
+    animation-name: moveBtn;
+    animation-duration: 3s;
+    animation-delay: 1s ;
+    animation-fill-mode: backwards;
+}
+
+.signup {
+    background-color: transparent;
+    color: #fff;
+    animation-name: moveBtn;
+    animation-duration: 3s;
+    animation-delay: 1.5s ;
+    animation-fill-mode: backwards;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    border: 2px solid tomato;
+}
+
+.modal {
+    width: 400px;
+    background-color: #fff;
+    opacity: 0.7;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.display {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* when form show-up */
+.form-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* when form off */
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+.x-btn {
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+    color: #222;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.x-btn:hover {
+    transform: rotate(45deg);
+}
+
+.form-header {
+    text-align: center;
+    margin: 80px 0 80px 0;
+    color: tomato;
+}
+
+.form-header h1 {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.form-header h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.input-group input {
+    width: 250px;
+    padding: 15px 15px 15px 50px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    color: #ddd;
+}
+
+.input-group i {
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.form button {
+    width: 310px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    background-color: #d867d8;
+    color: #fff;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin: 10px 0 5px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 30px;
+}
+
+.form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form button:active {
+    transform: translateY(0);
+}
+
+/* animation */
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateX(120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveBtn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
